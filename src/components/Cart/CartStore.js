@@ -35,13 +35,6 @@ const CartStore = () => {
         <div className="name grid  place-content-center ">
           <h1 className="font-bold">store name</h1>
         </div>
-        {/* <div className="right-img bg-gray-200 ">
-          <img
-            className="w-24 rounded-full p-3"
-            src="https://scontent.fhfa2-2.fna.fbcdn.net/v/t39.30808-6/291457391_556774552703567_2822531227252307747_n.png?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CyjXaIGWAJ8AX8tQaoa&_nc_ht=scontent.fhfa2-2.fna&oh=00_AfA4xhnT3nM9QjJBVZ4sEH53UHxoc1ruMHxEMD4NO-Bh7Q&oe=63A5F3AF"
-            alt=""
-          />
-        </div> */}
       </div>
       {state.map((product) => {
         return (
@@ -85,10 +78,6 @@ const CartStore = () => {
           <h1 className="font-bold">{calc()} $</h1>
           <h1>:Total</h1>
         </div>
-        {/* <div className="flex justify-between">
-          <h1 className="font-bold">0 $</h1>
-          <h1 className="">:בקניה זו חסכת</h1>
-        </div> */}
         <div className="flex justify-between">
           <h1 className="font-bold">{state.length}</h1>
           <h1 className="">: Quantity</h1>

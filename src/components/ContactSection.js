@@ -12,7 +12,7 @@ const ContactSection = () => {
     e.preventDefault();
 
     const { data: send } = await axios.post(
-      "https://e-commerce-server-019n.onrender.com/contact-us",
+      "https://e-commerce-server-3zp6.onrender.com/contact-us",
       data,
     );
   };

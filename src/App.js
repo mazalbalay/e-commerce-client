@@ -33,7 +33,6 @@ import Payment from "./components/userProfile/Payment";
 
 function App() {
   const user = JSON.parse(localStorage.getItem("user"))?.data;
-  console.log(user);
   return (
     <PayPalScriptProvider
       options={{
@@ -57,7 +56,7 @@ function App() {
           <Route path="/ThanksPage" element={<ThanksPage />} />
           <Route path="/ErrPage" element={<ErrPage />} />
           
-          <Route path="/userprofile/*" element={<UserProfile />}>
+          <Route path="/userprofile" element={<UserProfile />}>
             <Route path="userprofile/profile-info" element={<PersonalInfo />} />
             <Route path="userprofile/changepassword" element={<ChangePWD />} />
             <Route path="userprofile/order" element={<Order />} />

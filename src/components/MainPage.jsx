@@ -20,23 +20,19 @@ export default function MainPage() {
     setDepartments(data);
     console.log(data);
   };
-
-  console.log(Departments);
-  console.log(inputSearch);
-
+  
   return (
-    <div className="flex justify-center p-8">
+    <div className="flex justify-center ">
       <div className="w-4/5 flex flex-col justify-center items-center">
         <p className="text-4xl my-20 text-center text-gray-400 font-bold">
           Welcome To Our Website !
         </p>
         <input
           onChange={(e) => setinputSearch(e.target.value)}
-          className="mb-20 p-8 outline-none font-bold placeholder:text-pink-300 m-6 w-1/2 h-12 border-current border-4 border-solid border-gray-200 placeholder:text-center text-center rounded-md"
+          className="mb-20 p-4 py-10 outline-none font-bold placeholder:text-pink-300 m-6 w-full md:w-1/2 h-12 border-current border-4 border-solid border-gray-200 placeholder:text-center text-center rounded-md"
           type="text"
           placeholder="What would you like to search for?"
         />
-        {/* <p className="text-3xl text-center my-12 text-pink-300">Our Category</p> */}
 
         {Departments ? (
           <div className="flex flex-wrap">

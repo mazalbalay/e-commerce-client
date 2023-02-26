@@ -11,12 +11,12 @@ import $ from "jquery";
 const MainNav = () => {
   const user = JSON.parse(localStorage.getItem("user"))?.data;
   const state = useSelector((state) => state.CartReducer);
-  console.log(state);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   function navigateTo(route) {
     navigate(`${route}`);
   }
+
   return (
     <nav className="shadow-md w-full top-0 left-0 bg-white ">
       <div className="  container mx-auto flex items-center  justify-between py-4 md:px-40 px-7 ">
@@ -59,11 +59,9 @@ const MainNav = () => {
             <Link to="/"> Home</Link>
           </li>
 
-          <li className="flex bg-white items-center md:ml-5 md:my-0 my-7 text-l hover:underline">
-            <Link to="#">
-              Hello{" "}
-              <span className="border-b-2">{user ? user?.name : "Guest"} </span>
-            </Link>
+          <li className="flex bg-white items-center md:ml-5 md:my-0 my-7 text-l">
+            Hello_
+            <span className="">{user ? user?.name : "Guest"} </span>
           </li>
 
           {user ? (
@@ -77,10 +75,16 @@ const MainNav = () => {
                   className="w-[50px]  h-[50px] flex justify-center items-center  border-2 rounded-full  bg-white"
                 >
                   {user?.profileImg ? (
-                  <img className="cursor-pointer" src={user.profileImg} alt="" />
-                ) : (
-                  <div className="text-2xl cursor-pointer">{user?.email[0]?.toUpperCase()}</div>
-                )}
+                    <img
+                      className="cursor-pointer"
+                      src={user.profileImg}
+                      alt=""
+                    />
+                  ) : (
+                    <div className="text-2xl cursor-pointer">
+                      {user?.email[0]?.toUpperCase()}
+                    </div>
+                  )}
                 </div>
               </span>
             </li>

@@ -168,7 +168,7 @@ const dispatch= useDispatch()
               useSaveCard == false
             ) {
               setAddCard(!addCard);
-              await axios.post(`https://e-commerce-server-019n.onrender.com/order`, order);
+              await axios.post(`https://e-commerce-server-3zp6.onrender.com/order`, order);
               console.log(order);
             } else if (
               !undefined &&
@@ -184,7 +184,7 @@ const dispatch= useDispatch()
               useSaveCard == true
             ) {
               navigetor("/ThanksPage");
-              await axios.post("https://e-commerce-server-019n.onrender.com/order", order);
+              await axios.post("https://e-commerce-server-3zp6.onrender.com/order", order);
               console.log(order);
             } else {
               alert("Fill in all the fields");
