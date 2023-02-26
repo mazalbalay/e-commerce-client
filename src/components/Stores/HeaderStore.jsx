@@ -15,7 +15,7 @@ export default function HeaderStore(props) {
         <h1 className="text-white  text-2xl text-center">{props.name}</h1>
       </header>
       <div className="flex justify-center p-10">
-        <p className=" text-3xl text-gray-400 font-bold">
+        <p className=" text-3xl text-gray-400 font-bold capitalize">
           Category : {props.name}
         </p>
       </div>
