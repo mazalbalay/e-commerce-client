@@ -72,7 +72,7 @@ const MainNav = () => {
                     if ($(window).width() < 500) navigate("/userprofile/");
                     else navigate("/userProfile/userprofile/profile-info");
                   }}
-                  className="w-[50px]  h-[50px] flex justify-center items-center  border-2 rounded-full  bg-white"
+                  className="w-[50px]  h-[50px] flex justify-center items-center border-pink-300 border-2 rounded-full  bg-white"
                 >
                   {user?.profileImg ? (
                     <img
@@ -81,7 +81,7 @@ const MainNav = () => {
                       alt=""
                     />
                   ) : (
-                    <div className="text-2xl cursor-pointer">
+                    <div className="text-2xl cursor-pointer text-pink-300">
                       {user?.email[0]?.toUpperCase()}
                     </div>
                   )}

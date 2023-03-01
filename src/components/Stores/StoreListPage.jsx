@@ -4,7 +4,7 @@ import { allStores } from "../../api/userApi";
 import { useNavigate, useParams } from "react-router-dom";
 import StoreComp from "./StoreComp";
 import HeaderStore from ".//HeaderStore";
-import {getDepartment} from '../../api/Departments'
+import { getDepartment } from "../../api/Departments";
 import MainNav from "../Navs/MainNav";
 import MainPageFooter from "../Footers/MainPageFooter";
 import CartStore from "../Cart/CartStore";
@@ -15,18 +15,17 @@ const StoreListPage = () => {
   const [stores, setStores] = useState();
   const [department, setdepartment] = useState();
   const storesFu = async () => {
-    const  deps  = await getDepartment(depId);
+    const deps = await getDepartment(depId);
     setdepartment([deps.data]);
     const { data } = await allStores();
     const result = data.filter((store) => store.department === depName);
     setStores(result);
   };
- 
+
   useEffect(() => {
-storesFu();
+    storesFu();
   }, [depId]);
 
-  
   return (
     <div className="w-full flex flex-col justify-center items-center ">
       <div className="w-full">

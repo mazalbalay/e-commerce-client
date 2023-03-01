@@ -8,7 +8,7 @@ export default function DepartmentComp(props) {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}>
-<div className="flex  self-end  h-20 bg-slate-200	w-full opacity-90 text-pink-400 font-medium"><p className="m-auto">{props.text}</p></div>
+<div className="flex self-end h-20 bg-slate-200	w-full opacity-90 font-medium"><p className="m-auto text-pink-400 capitalize">{props.text}</p></div>
     </div>
   )
 }
